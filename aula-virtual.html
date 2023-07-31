@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>SGC - Servicios Generales de Capacitación, Consultoría y Construcción</title>
+      <link rel="stylesheet" href="estilo1.css"
+   </head>
+   <body>
+      <header>
+         <center><img src="Imagenes/LOGO.png"width="250px"></center>
+         <nav>
+            <ul>
+               <center>
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="historia.html">Conócenos</a></li>
+                  <li><a href="servicios.html">Servicios</a></li>
+                  <li><a href="compras.html">Tienda Virtual</a></li>
+                  <li><a href="aula-virtual.html">Aula Virtual</a></li>
+                  <li><a href="contacto.html">Contacto</a></li>
+               </center>
+            </ul>
+         </nav>
+      </header>
+      <center>
+         <section>
+            <h1>¡Bienvenido(a)! a SGC-Aula Virtual</h1>
+         </section>
+      </center>
+      <center>
+         <section class="page-section " id="contact">
+            <div class="container m-0 p-0">
+               <div class="row">
+                  <div class="col-lg-12 my-auto">
+                     <h2 class="section-heading">¡Hola!</h2>
+                     <h2 class="section-heading mb-3">Ingresa tus datos</h2>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-12  m-0 p-0">
+                     <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-7 form_txt_">
+                           <form action="/Login/" class="form-horizontal" method="post" role="form">
+                              <div class="form-group">
+                                 <p class="for_dat">
+                                    Usuario<span>*</span>
+                                 </p>
+                                 <input class="form-control" data-val="true" data-val-required="El campo usuario es obligatorio" id="Usuario" name="Usuario" type="text" value="">
+                                 <span class="field-validation-valid text-danger" data-valmsg-for="Usuario" data-valmsg-replace="true"></span>
+                                 <div class="portfolio-item">
+                                    <a href="/Login/Login/RecordarUsuario" target="_blank" class="portfolio-link">
+                                       <div class="portfolio-hover">
+                                          <div class="portfolio-hover-content">
+                                             <i class="fa fa-user"></i>
+                                             Conoce tu usuario aquí
+                                          </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                                 <p class="help-block text-danger"></p>
+                              </div>
+                              <div class="form-group">
+                                 <p class="for_dat">
+                                    Contraseña <span>*</span>
+                                 </p>
+                                 <input class="form-control" data-val="true" data-val-required="El campo password es obligatorio" id="Password" name="Password" type="password">
+                                 <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                                 <div class="portfolio-item">
+                                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                                       <div class="portfolio-hover">
+                                          <div class="portfolio-hover-content">
+                                             <i class="fa fa-lock"></i>
+                                             Conoce tu contraseña aquí
+                                          </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                                 <p class="help-block text-danger"></p>
+                              </div>
+                              <div class="form-group">
+                                 <div id="success"></div>
+                                 <button id="sendMessageButton" class="btn_pagar btn btn-primary btn-xl " type="submit" role="link">Ingresar</button>
+                              </div>
+                              <div class="clearfix"></div>
+                              <div class="contr">
+                                 <p class="text-center">
+                                    ¿Olvidaste tu contraseña?
+                                    <a href="/Login/Login/CambiarClave" target="_blank" class="rec_contra">Clic Aquí</a>
+                                 </p>
+                                 <!--<p class="text-center preg">
+                                    <a href="System.Configuration.ConfigurationManager.AppSettings["UrlFormHelpme"]" target="_blank" class="">¿Problemas para acceder a los servicios de este Portal? Resuélvelos, clic aquí  </a>
+                                    </p>-->
+                              </div>
+                              <a href="https://wa.me/51993517695?text=Hola%20tengo%20consultas" target="_blank">
+                                 <div id="atm-pestanacomercial-pestana" style="" class="atm-pestanacomercial-pestana-home atm-pestanacomercial-ocultar d-block d-sm-none">
+                                 </div>
+                              </a>
+                              <a href="https://wa.me/51993517695?text=Hola%20tengo%20consultas" target="_blank">
+                                 <div id="atm-pestanacomercial-pestana2" style="visibility:hidden" class="atm-pestanacomercial-pestana-home2 atm-pestanacomercial-ocultar d-none d-sm-block">
+                                 </div>
+                              </a>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </center>
+      <footer>
+         <a href="https://api.whatsapp.com/send?phone=051921740327&amp;text=Hola%20deseo%20mayor%20información%20sobre%20los%20cursos%20que%20ofrecen" target="wapppsss">
+         <img style="display:scroll;position:fixed;  z-index: 100; bottom:0px; right:0px;" src="Imagenes/LogoWapp1.png"width="50px">
+         </a>
+         <p>Empresa SGC &copy; 2023. Todos los derechos reservados.</p>
+      </footer>
+   </body>
+</html>
