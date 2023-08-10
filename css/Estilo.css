@@ -10,7 +10,7 @@ body {
 
 header {
   background-color: #ffffff;
-  padding: 10px;
+  padding: 0px;
   color: #333333;
 }
 
@@ -197,12 +197,12 @@ nav ul li a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 section {
-  padding: 20px;
+  padding: 0px;
 }
 
 h1 {
@@ -267,19 +267,19 @@ section ul {
 }
 
 section ul li {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 /* Estilos adicionales para resaltar los servicios */
 section ul li h2 {
   color: #333;
   font-size: 22px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 section ul li p {
   color: #666;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 /* Media queries para hacer la página responsive en dispositivos móviles */
@@ -414,15 +414,15 @@ margin-bottom: 30px;}
 
 .form-control
 {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .container {
-  margin-top: 100px;
+  margin-top: 5px;
 }
 .reset-links {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   
 }
 
