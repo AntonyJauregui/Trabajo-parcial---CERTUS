@@ -1,3 +1,4 @@
+
 :root {
 
   /* Fonts */
@@ -13,17 +14,17 @@
   --color-default-rgb: 26, 31, 36;
 
   /* Defult links color */
-  --color-links: rgb(0, 153, 255);
-  --color-links-hover: rgb(0, 153, 255);
+  --color-links: #0dcaf0;
+  --color-links-hover: #211ee0;
 
   /* Primay colors */
-  --color-primary: rgb(0, 153, 255);
-  --color-primary-light: rgb(0, 153, 255);
-  --color-primary-dark: rgb(0, 153, 255);
+  --color-primary: #0dcaf0;
+  --color-primary-light: #0dcaf0;
+  --color-primary-dark: #0dcaf0;
 
-  --color-primary-rgb: 223, 21, 41;
-  --color-primary-light-rgb: 255, 43, 43;
-  --color-primary-dark-rgb: 192, 7, 25;
+  --color-primary-rgb: 14, 162, 189;
+  --color-primary-light-rgb: 30, 195, 224;
+  --color-primary-dark-rgb: 1, 137, 161;
 
   /* Secondary colors */
   --color-secondary: #485664;
