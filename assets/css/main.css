@@ -1489,7 +1489,6 @@ section {
   background: var(--color-secondary) linear-gradient(rgba(var(--color-primary-rgb), 0.95), rgba(var(--color-primary-rgb), 0.6));
   border-color: var(--color-primary);
 }
-
 .features .nav-link.active h4 {
   color: var(--color-white);
 }
