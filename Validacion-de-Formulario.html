@@ -1,8 +1,14 @@
 <!DOCTYPE html>
+<!--
+ @author Raúl Caro Pastorino
+ @copyright Copyright © 2017 Raúl Caro Pastorino
+ @license https://wwww.gnu.org/licenses/gpl.txt
+-->
 <html lang="es">
   <head>
       <meta charset="utf-8">
       <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <meta name="author" content="Raúl Caro Pastorino" />
           
       <title>SGC - Servicios Generales de Capacitación, Consultoría y Construcción</title>
       <link rel="stylesheet" href="css/Estilo.css"> 
@@ -32,6 +38,66 @@
       <link href="assets/css/main.css" rel="stylesheet">
       <script src="assets/js/calculo.js"></script>
       
+      <!-- Template Formulario Validación -->
+      <script>
+        function test_patron(patron, valor) {
+            if (valor !== '' && valor !== null) {
+                return patron.test(valor);
+            }
+            return false;
+        }
+
+        // Recibe como parámetros la cadena con el error, el patrón y la cadena a comprobar
+        function ver_error(error, patron, valor) {
+            if (test_patron(patron, valor)) {
+                cajaMensajes.innerHTML = '';
+            } else {
+                cajaMensajes.innerHTML = error;
+            }
+        }
+
+        function test_input() {
+            var input_id = this.id;
+            var input_valor = this.value;
+
+            // Patrones
+            var dni_test = new RegExp("^[0-9]{2}\.[0-9]{3}\.[0-9]{3}-[a-zA-Z]$");
+            var nombre_test = new RegExp("^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$");
+            var edad_test = new RegExp(".*");
+            var hijos_test = new RegExp("^([0-9]+|(10)+)+$");
+            var email_test = new RegExp("^[a-zA-Z0-9_-]{2,63}@[a-zA-Z0-9]{2,63}[\.][a-z]{2,4}$");
+
+            switch (input_id) {
+                case 'dni':
+                    ver_error('Dni Incorrecto (99.999.999-X)', dni_test, input_valor);
+                    break;
+                case 'nombre':
+                    ver_error('Nombre Incorrecto (Mínimo 1 nombre y 1 apellido, Máximo 2 nombre y 2 apellidos)', nombre_test, input_valor);
+                    break;
+                case 'edad':
+                    ver_error('Edad no puede estar vacía', edad_test, input_valor);
+                    break;
+                case 'hijos':
+                    ver_error('Hijos Incorrecto (0-10)', hijos_test, input_valor);
+                    break;
+                case 'email':
+                    ver_error('Email Incorrecto (xxxxxx@yyyyy.zzz)', email_test, input_valor);
+                    break;
+            }
+        }
+
+        function iniciar() {
+            var inputs = document.getElementsByTagName('input');
+
+            for (x of inputs) {
+                // Poner al perder el foco del input
+                x.addEventListener('blur', test_input);
+            }
+        }
+
+        window.onload = iniciar;
+    </script>
+
       
   </head>
    <body>
@@ -56,27 +122,65 @@
          </div>   
       </header>  
 
-            
-      <div class="container" data-aos="fade-up" align="center">
-        <h1>¡Bienvenido(a)! a SGC-Aula Virtual</h1>       
-      </div>
-   
-   <div class="container">
-      <body>
-      <form class="logform" name="loginform" onSubmit="return validateForm();" action="main.html" method="post">
-        
-          <input type="text" id="username" class="form-control" placeholder="Usuario"/> 
-          <input type="password" id="password" class="form-control" placeholder="Contraseña">
-        <label class="checkbox">
-          <input type="checkbox" value="rememberMe"> Recordarme</label> 
-        <button class="btn btn-lg btn-primary btn-block loginbtn" type="submit">ingresar</button><div class="reset-links text-center">
-        <a href="Validacion-de-Formulario.html">Se olvido el usuario? </a>
-        <a href="Validacion-de-Formulario.html">Se olvido la contraseña? </a>
-        
-        </div>
-      </form>
+      <section id="features" class="features"><center>
+        <div data-aos="fade-up">
+        <div class conteiner>
+            <div class="row content-layout">
+            <div class="col-md-12 main-content">
+            <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">      
+      <div>
+        <form>
+            <fieldset>
+                <legend>Valida tus Datos para recuperar tu Usuario y/o Contraseña</legend>
+
+                <label for="dni">DNI:</label>
+                <input id="dni" type="text" name="dni" pattern="^[0-9]{2}\.[0-9]{3}\.[0-9]{3}-[a-zA-Z]$" required />
+
+                <br /><br />
+
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" type="text" name="nombre" size="40" maxlength="150"
+                    pattern="^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$" required />
+
+                <br /><br />
+
+                <label for="edad">Fecha de Nacimiento:</label>
+                <input id="edad" type="date" name="edad" required />
+
+                <br /><br />
+
+                <label for="hijos">Número de hijos</label>
+                <input id="hijos" type="number" name="hijos" min="0" max="10" required />
+
+                <br /><br />
+
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email" size="40" maxlength="132"
+                    pattern="^[a-zA-Z0-9_-]{2,63}@[a-zA-Z0-9]{2,63}[\.][a-z]{2,4}$" required />
+
+            </fieldset>
+
+            <button type="button">Comprobar</button>
+        </form>
+ 
+    <div id="cajaMensajes"></div>
+
+    </div>
+  </div>
+</div>
+<div class="col-md-2">
+</div>
+</div>
+</div>
+</div>
+</div>
+  </section></center>
+
       </body>
-   </div>
+
 
 <br>
 <br>
