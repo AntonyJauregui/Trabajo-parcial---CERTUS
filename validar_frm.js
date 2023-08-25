@@ -34,10 +34,10 @@ function test_patron(patron, valor) {
                     ver_error('Nombre Incorrecto (Mínimo 1 nombre , Máximo 3 nombre )', nombre_test, input_valor);
                     break;
                 case 'apellido':
-                    ver_error('Apellido Incorrecto (Mínimo 1 apellido, Máximo  2 apellidos)', apellido_test, input_valor);
+                    ver_error('Apellido Incorrecto (Mínimo 2 apellido, Máximo  3 apellidos)', apellido_test, input_valor);
                     break;    
                 case 'edad':
-                    ver_error('Edad no puede estar vacía', edad_test, input_valor);
+                    ver_error('Fecha no puede estar vacía', edad_test, input_valor);
                     break;
                 case 'Respuesta':
                     ver_error('Respuesta Incorrecta (Mínimo 1 palabra , Máximo 6 palabras )', Respuesta_test, input_valor);
