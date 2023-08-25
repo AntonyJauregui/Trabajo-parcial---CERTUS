@@ -28,7 +28,7 @@ function test_patron(patron, valor) {
 
             switch (input_id) {
                 case 'dni':
-                    ver_error('Dni Incorrecto (Minimo 8 digitos)', dni_test, input_valor);
+                    ver_error('Dni Incorrecto (Colocar 8 digitos)', dni_test, input_valor);
                     break;
                 case 'nombre':
                     ver_error('Nombre Incorrecto (Mínimo 1 nombre , Máximo 3 nombre )', nombre_test, input_valor);
