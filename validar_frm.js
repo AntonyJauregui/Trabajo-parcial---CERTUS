@@ -24,6 +24,7 @@ function test_patron(patron, valor) {
             var apellido_test = new RegExp("^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$");
             var edad_test = new RegExp(".*");
             var Respuesta_test = new RegExp("^[a-zA-Z]");
+            var Consulta = new RegExp("^[a-zA-Z]");
             var email_test = new RegExp("^[a-zA-Z0-9_-]{2,63}@[a-zA-Z0-9]{2,63}[\.][a-z]{2,4}$");
 
             switch (input_id) {
@@ -42,6 +43,9 @@ function test_patron(patron, valor) {
                 case 'Respuesta':
                     ver_error('Respuesta Incorrecta (Mínimo 1 palabra , Máximo 6 palabras )', Respuesta_test, input_valor);
                     break;
+                case 'Consulta':
+                        ver_error('Consulta Incorrecta (Mínimo 1 caracter , Maximo 150 caracteres )', Consulta, input_valor);
+                        break;     
                 case 'email':
                     ver_error('Email Incorrecto (ingrese arroba @ o mas carateres que completen un correo)', email_test, input_valor);
                     break;
