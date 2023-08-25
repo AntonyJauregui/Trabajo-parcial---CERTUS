@@ -20,7 +20,7 @@ function test_patron(patron, valor) {
 
             // Patrones
             var dni_test = new RegExp("^[0-9]{8}");
-            var nombre_test = new RegExp("^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$");
+            var nombre_test = new RegExp("^[a-zA-Z]");
             var apellido_test = new RegExp("^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$");
             var edad_test = new RegExp(".*");
             var Respuesta_test = new RegExp("^[a-zA-Z]");
