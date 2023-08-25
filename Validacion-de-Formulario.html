@@ -64,12 +64,12 @@
             var dni_test = new RegExp("^[0-9]{8}");
             var nombre_test = new RegExp("^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$");
             var edad_test = new RegExp(".*");
-            var Respuesta_test = new RegExp("[^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+]{0,2}$");
+            var Respuesta_test = new RegExp("^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+)");
             var email_test = new RegExp("^[a-zA-Z0-9_-]{2,63}@[a-zA-Z0-9]{2,63}[\.][a-z]{2,4}$");
 
             switch (input_id) {
                 case 'dni':
-                    ver_error('Dni Incorrecto (Ingrese solo numeros sin puntos y letras)', dni_test, input_valor);
+                    ver_error('Dni Incorrecto (99.999.999-X)', dni_test, input_valor);
                     break;
                 case 'nombre':
                     ver_error('Nombre Incorrecto (Mínimo 1 nombre y 1 apellido, Máximo 2 nombre y 2 apellidos)', nombre_test, input_valor);
@@ -172,9 +172,9 @@
                   </tr>
                   <tr>
                     
-                    <td><label for="PreguntaSecreta">Pregunta Secreta</label></td>
+                    <td><label for="cboGradoInstruccion">Pregunta Secreta</label></td>
                 
-                    <td><select id="PreguntaSecreta">
+                    <td><select id="cboGradoInstruccion">
                         <option value="">Primer Nombre de Mama?</option>
                         <option value="0">Nombre de mi Primera Escuela?</option>
                         <option value="1">Heroe Favorito?</option>
@@ -187,7 +187,7 @@
                     <td><label for="Respuesta">Respuesta</label></td>   
 
                   <td> <input id="Respuesta" type="text" name="Respuesta" size="40" maxlength="150"
-                    pattern="^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$" required /></td>
+                    pattern="^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+)" required /></td>
                 </tr>
                   <tr>
               
