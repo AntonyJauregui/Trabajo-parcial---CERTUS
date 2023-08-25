@@ -6,13 +6,15 @@
           
             <title>SGC - Servicios Generales de Capacitación, Consultoría y Construcción</title>
 
+            <script language="javascript" type="text/javascript" src="js.js"></script>
+
             <link rel="stylesheet" href="css/Estilo.css"> 
-          
+       
             <!-- Favicons -->
             <link href="assets/img/favicon.png" rel="icon">
             <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
           
-   
+           
             <!-- Vendor CSS Files -->
             <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
             <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -63,20 +65,20 @@
                          su futuro deseado.</p>
                  </div>
  
-                 <form action="">
+                 <form name="form1" action="" method="POST">
                      <div class="imputBox">
                          <label for="">Ingresa tu nombre</label>
-                         <input type="text" placeholder="Nombre...">
+                         <input name="nome"  type="text" placeholder="Nombre..." type="text">
                      </div>
                      <div class="imputBox">
                          <label for="">Ingresa tu email</label>
-                         <input type="email" placeholder="Email...">
+                         <input name="email" type="email" placeholder="Email..." type="email">
                      </div>
                      <div class="imputBox">
                          <label for="">Ingresa tu mensaje</label>
-                         <textarea name="" id="" cols="30" rows="5" placeholder="Mensaje"></textarea>
+                         <textarea name="endereco" id="" cols="30" rows="5" placeholder="Mensaje"></textarea>
                      </div>
-                     <input type="submit" value="Enviar Mensaje">
+                     <input type="submit" onclick="validar()">
                  </form>
              </div>
  
@@ -212,6 +214,9 @@
        
                <div id="preloader"></div>
            
+
+
+            
                <!-- Vendor JS Files -->
                <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
                <script src="assets/vendor/aos/aos.js"></script>

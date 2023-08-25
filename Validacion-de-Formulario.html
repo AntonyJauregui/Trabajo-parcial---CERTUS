@@ -11,6 +11,8 @@
       <meta name="author" content="Raúl Caro Pastorino" />
           
       <title>SGC - Servicios Generales de Capacitación, Consultoría y Construcción</title>
+      <script language="javascript" type="text/javascript" src="validar_frm.js"></script>
+
       <link rel="stylesheet" href="css/Estilo.css"> 
 
           
@@ -38,65 +40,7 @@
       <link href="assets/css/main.css" rel="stylesheet">
       <script src="assets/js/calculo.js"></script>
       
-      <!-- Template Formulario Validación -->
-      <script>
-        function test_patron(patron, valor) {
-            if (valor !== '' && valor !== null) {
-                return patron.test(valor);
-            }
-            return false;
-        }
-
-        // Recibe como parámetros la cadena con el error, el patrón y la cadena a comprobar
-        function ver_error(error, patron, valor) {
-            if (test_patron(patron, valor)) {
-                cajaMensajes.innerHTML = '';
-            } else {
-                cajaMensajes.innerHTML = error;
-            }
-        }
-
-        function test_input() {
-            var input_id = this.id;
-            var input_valor = this.value;
-
-            // Patrones
-            var dni_test = new RegExp("^[0-9]{8,8}");
-            var nombre_test = new RegExp("^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$");
-            var edad_test = new RegExp(".*");
-            var Respuesta_test = new RegExp("^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$");
-            var email_test = new RegExp("^[a-zA-Z0-9_-]{2,63}@[a-zA-Z0-9]{2,63}[\.][a-z]{2,4}$");
-
-            switch (input_id) {
-                case 'dni':
-                    ver_error('Dni Incorrecto (Nuero de DNI Incorrecto verifique que solo tenga 8 digitos)', dni_test, input_valor);
-                    break;
-                case 'nombre':
-                    ver_error('Nombre Incorrecto (Mínimo 1 nombre y 1 apellido, Máximo 2 nombre y 2 apellidos)', nombre_test, input_valor);
-                    break;
-                case 'edad':
-                    ver_error('Edad no puede estar vacía', edad_test, input_valor);
-                    break;
-                case 'Respuesta':
-                    ver_error('Respuesta Incorrecta (Mínimo 2 palabra , Máximo 6 palabras )', Respuesta_test, input_valor);
-                    break;
-                case 'email':
-                    ver_error('Email Incorrecto (xxxxxx@yyyyy.zzz)', email_test, input_valor);
-                    break;
-            }
-        }
-
-        function iniciar() {
-            var inputs = document.getElementsByTagName('input');
-
-            for (x of inputs) {
-                // Poner al perder el foco del input
-                x.addEventListener('blur', test_input);
-            }
-        }
-
-        window.onload = iniciar;
-    </script>
+      <!-- Template Formulario Validación -->     
 
       
   </head>
@@ -136,74 +80,55 @@
       <div>
 
         <section id="features" class="features">
-        <form>
+        <form name="form1" action="" method="POST">
             <fieldset>
                 <center>
                 <legend>Valida tus Datos para recuperar tu Usuario y/o Contraseña</legend>
             </center>
-
             <table class="default" align="center">
-
-                <tr>
-              
-                  <td> <label for="dni">DNI:</label></td>
-              
-                  <td> <input id="dni" type="text" name="dni" pattern="^[0-9]{2}\.[0-9]{3}\.[0-9]{3}-[a-zA-Z]$" required /></td>             
-                
-              
-                </tr>
-              
-                <tr>
-              
-                  <td><label for="nombre">Nombres y Apellidos:</label></td>
-              
+                <tr>              
+                  <td> <label for="dni">DNI:</label></td>              
+                  <td> <input id="dni" type="number" minlength="8" maxlength="8" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" /> </td>   
+                           
+                              
+                </tr>              
+                <tr>              
+                  <td><label for="nombre">Nombre:</label></td>              
                   <td> <input id="nombre" type="text" name="nombre" size="40" maxlength="150"
                     pattern="^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$" required /></td>             
                
               
                 </tr>
-                <tr>
-              
-                    <td><label for="edad">Fecha de nacimiento :</label></td>
-                
-                    <td> <input id="edad" type="date" name="edad" required /></td>               
-                   
-                
+                <tr>              
+                    <td><label for="edad">Fecha de nacimiento :</label></td>                
+                    <td> <input id="edad" type="date" name="edad" required /></td>  
                   </tr>
-                  <tr>
-                    
-                    <td><label for="Pregunta">Pregunta Secreta</label></td>
-                
-                    <td><select id="Pregunta">
-                        <option value="">Primer Nombre y Apellido de Mama?</option>
+                  <tr>                    
+                    <td><label for="cboGradoInstruccion">Pregunta Secreta</label></td>                
+                    <td><select id="cboGradoInstruccion">
+                        <option value="">Primer Nombre de Mama?</option>
                         <option value="0">Nombre de mi Primera Escuela?</option>
-                        <option value="1">Artista Favorito?</option>
-                        <option value="2">Club Favorito?</option>
-                    </td>               
-                   
-                
+                        <option value="1">Heroe Favorito?</option>
+                        <option value="2">Color Favorito?</option>
+                    </td>  
                   </tr>
                   <tr>
                     <td><label for="Respuesta">Respuesta</label></td>   
 
                   <td> <input id="Respuesta" type="text" name="Respuesta" size="40" maxlength="150"
-                    pattern="^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$" required /></td>
+                    pattern="^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+)" required /></td>
                 </tr>
-                  <tr>
-              
+                  <tr>              
                     <td><label for="email">Email:</label></td>
                 
                     <td><input id="email" type="email" name="email" size="40" maxlength="132"
                         pattern="^[a-zA-Z0-9_-]{2,63}@[a-zA-Z0-9]{2,63}[\.][a-z]{2,4}$" required /></td>    
                   </tr>              
               </table>
-
-
-
             </fieldset>
             <center>
                 <br>
-            <button type="button"  class="btn btn-lg btn-primary btn-block loginbtn">Comprobar</button>
+            <button type="button"  class="btn btn-lg btn-primary btn-block loginbtn" onclick="test_input()">Comprobar</button>
            
             <center>
         </form>
