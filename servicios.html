@@ -1,719 +1,651 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-            <meta charset="utf-8">
-            <meta content="width=device-width, initial-scale=1.0" name="viewport">
-          
-            <title>SGC - Servicios Generales de Capacitación, Consultoría y Construcción</title>
-
-            <link rel="stylesheet" href="css/Estilo.css"> 
-          
-            <!-- Favicons -->
-            <link href="assets/img/favicon.png" rel="icon">
-            <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-          
-   
-            <!-- Vendor CSS Files -->
-            <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-            <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-            <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-            <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-            <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-          
-            <!-- Variables CSS Files. Uncomment your preferred color scheme -->
-            <link href="assets/css/variables.css" rel="stylesheet">
-          
-          
-            <!-- Template Main CSS File -->
-            <link href="assets/css/main.css" rel="stylesheet">
-      
-            <script>
-
-              function validarFormulario(){
-                  
-                  //Capturando los valores ingresados
-                  let nombre = document.getElementById("txtNombre").value;
-                  let apellido = document.getElementById("txtApellido").value;
-                  let direccion = document.getElementById("txtDireccion").value;
-                  let gradoInstruccion = document.getElementById("cboGradoInstruccion").value;
-                  let correoElectronico = document.getElementById("txtCorreo").value;
-  
-                  //Validar el contenido de los campos
-  
-                  if(nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)){
-                      alert("No se ingreso el nombre o se coloco solo espacios en blanco");
-                      return false;
-                  }
-  
-                  if(apellido == null || apellido.length == 0 || /^\s+$/.test(apellido)){
-                      alert("No se ingreso el apellido o se coloco solo espacios en blanco");
-                      return false;
-                  }
-  
-                  if(direccion == null || direccion.length == 0 || /^\s+$/.test(direccion)){
-                      alert("No se ingreso la direccion o se coloco solo espacios en blanco");
-                      return false;
-                  }
-  
-                  if(gradoInstruccion == null || gradoInstruccion == ""){
-                      alert("Debe seleccionar un grado de instruccion");
-                      return false;
-                  }
-  
-                  if(  !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(correoElectronico))  ){
-                      alert("Ingrese un correo electronico valido");
-                      return false;
-                  }
-  
-                  ///
-                  
-                  return true;
-              }
-  
-  
-          </script>
-
-      
-    </head>
-         <body>
-            <header id="header" >   
-              <section id="hero-animated" class="hero-animated d-flex align-items-center">
-              <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-              <img src="Imagenes/LOGO.png" class="img-fluid animated" width="250px">
-            </section>
-            </div>
-              <div class="col-sm-12 d-flex justify-content-center" >
-                <nav  id="navbar" class="navbar">
-                  <ul>  
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="historia.html">Conócenos</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="Tienda-Virtual.html">Tienda Virtual</a></li>
-                    <li><a href="aula-virtual.html">Aula Virtual</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>        
-                  </ul>
-                  <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav>
-              </div>   
-            </header>
-            <div class="container" data-aos="fade-up">
-          
-              <div class="section-header">
-                <h2>Consultorías</h2>
-            </div>
-          </div>
-           <!-- ======= Features Section ======= -->
-           <section id="features" class="features">
-            <div class="container" data-aos="fade-up">
-          
-              <ul class="nav nav-tabs row gy-4 d-flex">
-          
-                <li class="nav-item col-6 col-md-4 col-lg-2">
+   <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title>SGC - Servicios Generales de Capacitación, Consultoría y Construcción</title>
+      <script language="javascript" type="text/javascript" src="validar_frm.js"></script>
+      <link rel="stylesheet" href="css/Estilo.css">
+      <!-- Favicons -->
+      <link href="assets/img/favicon.png" rel="icon">
+      <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+      <!-- Vendor CSS Files -->
+      <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+      <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+      <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+      <link href="assets/css/variables.css" rel="stylesheet">
+      <!-- Template Main CSS File -->
+      <link href="assets/css/main.css" rel="stylesheet">
+   </head>
+   <body>
+      <header id="header" >
+         <section id="hero-animated" class="hero-animated d-flex align-items-center">
+            <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+               <img src="Imagenes/LOGO.png" class="img-fluid animated" width="250px">
+         </section>
+         </div>
+         <div class="col-sm-12 d-flex justify-content-center" >
+            <nav  id="navbar" class="navbar">
+               <ul>
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="historia.html">Conócenos</a></li>
+                  <li><a href="servicios.html">Servicios</a></li>
+                  <li><a href="Tienda-Virtual.html">Tienda Virtual</a></li>
+                  <li><a href="aula-virtual.html">Aula Virtual</a></li>
+                  <li><a href="contacto.html">Contacto</a></li>
+               </ul>
+               <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+         </div>
+      </header>
+      <div class="container" data-aos="fade-up">
+         <div class="section-header">
+            <h2>Consultorías</h2>
+         </div>
+      </div>
+      <!-- ======= Features Section ======= -->
+      <section id="features" class="features">
+         <div class="container" data-aos="fade-up">
+            <ul class="nav nav-tabs row gy-4 d-flex">
+               <li class="nav-item col-6 col-md-4 col-lg-2">
                   <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-                    <i class="bi bi-moisture color-teal"></i>
-                    <h4>Topografía y geodesia</h4>
+                     <i class="bi bi-moisture color-teal"></i>
+                     <h4>Topografía y geodesia</h4>
                   </a>
-                </li><!-- End Tab 1 Nav -->
-          
-                <li class="nav-item col-6 col-md-4 col-lg-2">
+               </li>
+               <!-- End Tab 1 Nav -->
+               <li class="nav-item col-6 col-md-4 col-lg-2">
                   <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-                    <i class="bi bi-cone-striped color-indigo"></i>
-                    <h4>Saneamiento de predios</h4>
+                     <i class="bi bi-cone-striped color-indigo"></i>
+                     <h4>Saneamiento de predios</h4>
                   </a>
-                </li><!-- End Tab 2 Nav -->
-          
-                <li class="nav-item col-6 col-md-4 col-lg-2">
+               </li>
+               <!-- End Tab 2 Nav -->
+               <li class="nav-item col-6 col-md-4 col-lg-2">
                   <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-                    <i class="bi bi-body-text color-orange"></i>
-                    <h4>Expedientes técnicos</h4>
+                     <i class="bi bi-body-text color-orange"></i>
+                     <h4>Expedientes técnicos</h4>
                   </a>
-                </li><!-- End Tab 3 Nav -->
-          
-                <li class="nav-item col-6 col-md-4 col-lg-2">
+               </li>
+               <!-- End Tab 3 Nav -->
+               <li class="nav-item col-6 col-md-4 col-lg-2">
                   <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-                    <i class="bi bi-buildings color-black"></i>
-                    <h4>Gestión de proyectos</h4>
+                     <i class="bi bi-buildings color-black"></i>
+                     <h4>Gestión de proyectos</h4>
                   </a>
-                </li><!-- End Tab 4 Nav -->
-          
-                <li class="nav-item col-6 col-md-4 col-lg-2">
+               </li>
+               <!-- End Tab 4 Nav -->
+               <li class="nav-item col-6 col-md-4 col-lg-2">
                   <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5">
-                    <i class="bi bi-building-fill-gear color-blue"></i>
-                    <h4>Ingeniería Estructural</h4>
+                     <i class="bi bi-building-fill-gear color-blue"></i>
+                     <h4>Ingeniería Estructural</h4>
                   </a>
-                </li><!-- End Tab 5 Nav -->
-          
-                <li class="nav-item col-6 col-md-4 col-lg-2">
+               </li>
+               <!-- End Tab 5 Nav -->
+               <li class="nav-item col-6 col-md-4 col-lg-2">
                   <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-6">
-                    <i class="bi bi-map color-orange"></i>
-                    <h4>Diseño y modelamiento BIM</h4>
+                     <i class="bi bi-map color-orange"></i>
+                     <h4>Diseño y modelamiento BIM</h4>
                   </a>
-                </li><!-- End Tab 6 Nav -->
-          
-              </ul>
-          
-              <div class="tab-content">
-          
-                <div class="tab-pane active show" id="tab-1">
+               </li>
+               <!-- End Tab 6 Nav -->
+            </ul>
+            <div class="tab-content">
+               <div class="tab-pane active show" id="tab-1">
                   <div class="row gy-4">
-                    <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-                      <h3>Topografía y geodesia</h3>
-                      <p class="fst-italic">
-                       <p>Los levantamientos geodésicos, a diferencia de los topográficos, consideran la auténtica forma de la Tierra, lo que exige una gran exactitud. Por otra parte, un levantamiento topográfico constituye una representación gráfica que debe satisfacer los criterios necesarios para que un constructor pueda posicionar un proyecto en el terreno. Es por esto que en CCI ponemos a tu disposición:</p> 
-                      <ul>
-                        <li><i class="bi bi-check-circle-fill"></i> Una sólida formación técnica relacionada a trabajos reales del campo laboral, haciendo uso eficiente de los materiales y equipos usados en el campo de aplicación.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Contamos con un staff profesional de primer nivel, con amplia experiencia en el campo laboral y en una variedad de proyectos Topográficos..</li>
-                        <li><i class="bi bi-check-circle-fill"></i> El profesional técnico en Topografía llega a obtener una visión empresarial y ejecutora en el campo laboral, generando y obteniendo sueldos elevados..</li>
-                        <li><i class="bi bi-check-circle-fill"></i>Establecimiento de puntos geodésicos, levantamientos y replanteos topográficos (carreteras, canales, urbanos, etc.).
-                        </li>
-                        <li><i class="bi bi-check-circle-fill"></i> Batimetría, fotogrametría y lotizaciones </li>
-                      </ul>
-                      <p>
-                        Nuestros estudiantes tienen contacto con la industria y campos de su profesión como parte importante de su formación, realizando pasantías al finalizar el cuarto ciclo de estudios y prácticas al concluir la carrera.
-                      </p>
-                    </div>
-                    <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                      <img src="assets/img/features-1.svg" alt="" class="img-fluid">
-                    </div>
+                     <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Topografía y geodesia</h3>
+                        <p class="fst-italic">
+                        <p>Los levantamientos geodésicos, a diferencia de los topográficos, consideran la auténtica forma de la Tierra, lo que exige una gran exactitud. Por otra parte, un levantamiento topográfico constituye una representación gráfica que debe satisfacer los criterios necesarios para que un constructor pueda posicionar un proyecto en el terreno. Es por esto que en CCI ponemos a tu disposición:</p>
+                        <ul>
+                           <li><i class="bi bi-check-circle-fill"></i> Una sólida formación técnica relacionada a trabajos reales del campo laboral, haciendo uso eficiente de los materiales y equipos usados en el campo de aplicación.</li>
+                           <li><i class="bi bi-check-circle-fill"></i> Contamos con un staff profesional de primer nivel, con amplia experiencia en el campo laboral y en una variedad de proyectos Topográficos..</li>
+                           <li><i class="bi bi-check-circle-fill"></i> El profesional técnico en Topografía llega a obtener una visión empresarial y ejecutora en el campo laboral, generando y obteniendo sueldos elevados..</li>
+                           <li><i class="bi bi-check-circle-fill"></i>Establecimiento de puntos geodésicos, levantamientos y replanteos topográficos (carreteras, canales, urbanos, etc.).
+                           </li>
+                           <li><i class="bi bi-check-circle-fill"></i> Batimetría, fotogrametría y lotizaciones </li>
+                        </ul>
+                        <p>
+                           Nuestros estudiantes tienen contacto con la industria y campos de su profesión como parte importante de su formación, realizando pasantías al finalizar el cuarto ciclo de estudios y prácticas al concluir la carrera.
+                        </p>
+                     </div>
+                     <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                        <img src="assets/img/features-1.svg" alt="" class="img-fluid">
+                     </div>
                   </div>
-                </div><!-- End Tab Content 1 -->
-          
-                <div class="tab-pane" id="tab-2">
+               </div>
+               <!-- End Tab Content 1 -->
+               <div class="tab-pane" id="tab-2">
                   <div class="row gy-4">
-                    <div class="col-lg-8 order-2 order-lg-1">
-                      <h3>Saneamiento de Predios</h3>
-                      <p>
-                        La regularización física y legal de los predios implica el procedimiento destinado a corregir la documentación relacionada con la propiedad del terreno en primer lugar, y luego, en lo que respecta a cualquier estructura construida en el predio (si aplica). El propósito es obtener la certificación o acreditación adecuada para permitir su registro en los Registros Públicos. 
-                      </p>
-                      <p class="fst-italic">
-                       El objetivo del curso es proporcionar los conocimientos básicos necesarios en el campo de Saneamiento Predial de Inmuebles, acorde con los recientes dispositivos promulgados. Exponer las Técnicas, nuevos métodos y procedimientos para la inscripción de predios en el Registro de Predios.
-                      </p>
-                      <ul>
-                        <li><i class="bi bi-check-circle-fill"></i> Al finalizar el curso, el alumno poseerá conocimiento relacionado a Planos para registro públicos,inmatriculación de predios, declaratoria de fábrica y prescripción adquisitiva de dominio.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> a partir de ellos podrá identificar todas las tareas, procedimientos y procesos necesarios.</li>
-                        
-                      </ul>
-                    </div>
-                    <div class="col-lg-4 order-1 order-lg-2 text-center">
-                      <img src="assets/img/Saneamiento-predios.svg" alt="" class="img-fluid">
-                    </div>
+                     <div class="col-lg-8 order-2 order-lg-1">
+                        <h3>Saneamiento de Predios</h3>
+                        <p>
+                           La regularización física y legal de los predios implica el procedimiento destinado a corregir la documentación relacionada con la propiedad del terreno en primer lugar, y luego, en lo que respecta a cualquier estructura construida en el predio (si aplica). El propósito es obtener la certificación o acreditación adecuada para permitir su registro en los Registros Públicos. 
+                        </p>
+                        <p class="fst-italic">
+                           El objetivo del curso es proporcionar los conocimientos básicos necesarios en el campo de Saneamiento Predial de Inmuebles, acorde con los recientes dispositivos promulgados. Exponer las Técnicas, nuevos métodos y procedimientos para la inscripción de predios en el Registro de Predios.
+                        </p>
+                        <ul>
+                           <li><i class="bi bi-check-circle-fill"></i> Al finalizar el curso, el alumno poseerá conocimiento relacionado a Planos para registro públicos,inmatriculación de predios, declaratoria de fábrica y prescripción adquisitiva de dominio.</li>
+                           <li><i class="bi bi-check-circle-fill"></i> a partir de ellos podrá identificar todas las tareas, procedimientos y procesos necesarios.</li>
+                        </ul>
+                     </div>
+                     <div class="col-lg-4 order-1 order-lg-2 text-center">
+                        <img src="assets/img/Saneamiento-predios.svg" alt="" class="img-fluid">
+                     </div>
                   </div>
-                </div><!-- End Tab Content 2 -->
-          
-                <div class="tab-pane" id="tab-3">
+               </div>
+               <!-- End Tab Content 2 -->
+               <div class="tab-pane" id="tab-3">
                   <div class="row gy-4">
-                    <div class="col-lg-8 order-2 order-lg-1">
-                      <h3>Expedientes técnicos</h3>
-                      <p>
-                        Ofrecemos el servicio de elaboración de expedientes técnicos, aplicando la metodología BIM como valor agregado. En CCI nuestros especialistas en gestión, ingeniería y arquitectura desarrollan proyectos de:
-                      </p>
-                      <p class="fst-italic">
-                        
-                      </p>
-                      <ul>
-                        <li><i class="bi bi-check-circle-fill"></i> Edificaciones.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Obras de saneamiento.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Obras viales.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Obras hidráulicas.</li>
-                      </ul>            
-                    </div>
-                    <div class="col-lg-4 order-1 order-lg-2 text-center">
-                      <img src="assets/img/expedientes-tecnicos.svg" alt="" class="img-fluid">
-                    </div>
+                     <div class="col-lg-8 order-2 order-lg-1">
+                        <h3>Expedientes técnicos</h3>
+                        <p>
+                           Ofrecemos el servicio de elaboración de expedientes técnicos, aplicando la metodología BIM como valor agregado. En CCI nuestros especialistas en gestión, ingeniería y arquitectura desarrollan proyectos de:
+                        </p>
+                        <p class="fst-italic">
+                        </p>
+                        <ul>
+                           <li><i class="bi bi-check-circle-fill"></i> Edificaciones.</li>
+                           <li><i class="bi bi-check-circle-fill"></i> Obras de saneamiento.</li>
+                           <li><i class="bi bi-check-circle-fill"></i> Obras viales.</li>
+                           <li><i class="bi bi-check-circle-fill"></i> Obras hidráulicas.</li>
+                        </ul>
+                     </div>
+                     <div class="col-lg-4 order-1 order-lg-2 text-center">
+                        <img src="assets/img/expedientes-tecnicos.svg" alt="" class="img-fluid">
+                     </div>
                   </div>
-                </div><!-- End Tab Content 3 -->
-          
-                <div class="tab-pane" id="tab-4">
+               </div>
+               <!-- End Tab Content 3 -->
+               <div class="tab-pane" id="tab-4">
                   <div class="row gy-4">
-                    <div class="col-lg-8 order-2 order-lg-1">
-                      <h3>Gestión de proyectos</h3>
-                      <p>
-                        Administrar un proyecto involucra una inversión de tiempo limitado en la cual la organización de tareas, el seguimiento y una gestión eficaz de los recursos y la programación temporal adquieren una significativa relevancia con el fin de asegurar el logro exitoso. En CCI, aplicamos las técnicas y procedimientos de gestión del PMI, Lean Construction y BIM, lo que nos capacita para administrar tu proyecto de manera efectiva y proporcionarte:  
-             
-                      </p>
-                      <p class="fst-italic">
-                        
-                      </p>
-                      <ul>
-                        <li><i class="bi bi-check-circle-fill"></i> Desarrollo de especificaciones técnicas para la calidad del proyecto.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Planificación y programación del proyecto.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Estimación del costo del proyecto.</li>
-                                                
-                      </ul>
-                    </div>
-                    <div class="col-lg-4 order-1 order-lg-2 text-center">
-                      <img src="assets/img/gest-proyectos.svg" alt="" class="img-fluid">
-                    </div>
+                     <div class="col-lg-8 order-2 order-lg-1">
+                        <h3>Gestión de proyectos</h3>
+                        <p>
+                           Administrar un proyecto involucra una inversión de tiempo limitado en la cual la organización de tareas, el seguimiento y una gestión eficaz de los recursos y la programación temporal adquieren una significativa relevancia con el fin de asegurar el logro exitoso. En CCI, aplicamos las técnicas y procedimientos de gestión del PMI, Lean Construction y BIM, lo que nos capacita para administrar tu proyecto de manera efectiva y proporcionarte:  
+                        </p>
+                        <p class="fst-italic">
+                        </p>
+                        <ul>
+                           <li><i class="bi bi-check-circle-fill"></i> Desarrollo de especificaciones técnicas para la calidad del proyecto.</li>
+                           <li><i class="bi bi-check-circle-fill"></i> Planificación y programación del proyecto.</li>
+                           <li><i class="bi bi-check-circle-fill"></i> Estimación del costo del proyecto.</li>
+                        </ul>
+                     </div>
+                     <div class="col-lg-4 order-1 order-lg-2 text-center">
+                        <img src="assets/img/gest-proyectos.svg" alt="" class="img-fluid">
+                     </div>
                   </div>
-                </div><!-- End Tab Content 4 -->
-          
-                <div class="tab-pane" id="tab-5">
+               </div>
+               <!-- End Tab Content 4 -->
+               <div class="tab-pane" id="tab-5">
                   <div class="row gy-4">
-                    <div class="col-lg-8 order-2 order-lg-1">
-                      <h3>Ingeniería estructural</h3>
-                      <p>
-                        En esta capacitación, serás testigo de múltiples soluciones estructurales eficaces, confiables e innovadoras que hacen que un proyecto sea factible, seguro y funcional a lo largo del tiempo. Las situaciones adversas o las limitaciones en cuanto a costos y tiempo en un proyecto demandan la experiencia de profesionales altamente competentes. En este sentido, disponemos de un grupo de ingenieros especializados en estructuras que encontrarán la solución más adecuada para las demandas de proyectos, incluyendo:          
-           
-                      </p>
-                      <p class="fst-italic">
-                       
-                      </p>
-                      <ul>
-                        <li><i class="bi bi-check-circle-fill"></i> Diseño estructural de edificaciones.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Diseño estructural de reservorios.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Diseño estructural de cimentaciones.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Diseño  estructural de muros de contención.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Diseño estructural de estructuras metálicas.</li>
-                        
-                      </ul>
-                    </div>
-                    <div class="col-lg-4 order-1 order-lg-2 text-center">
-                      <img src="assets/img/ingenieria-estructural.svg" alt="" class="img-fluid">
-                    </div>
+                     <div class="col-lg-8 order-2 order-lg-1">
+                        <h3>Ingeniería estructural</h3>
+                        <p>
+                           En esta capacitación, serás testigo de múltiples soluciones estructurales eficaces, confiables e innovadoras que hacen que un proyecto sea factible, seguro y funcional a lo largo del tiempo. Las situaciones adversas o las limitaciones en cuanto a costos y tiempo en un proyecto demandan la experiencia de profesionales altamente competentes. En este sentido, disponemos de un grupo de ingenieros especializados en estructuras que encontrarán la solución más adecuada para las demandas de proyectos, incluyendo:          
+                        </p>
+                        <p class="fst-italic">
+                        </p>
+                        <ul>
+                           <li><i class="bi bi-check-circle-fill"></i> Diseño estructural de edificaciones.</li>
+                           <li><i class="bi bi-check-circle-fill"></i> Diseño estructural de reservorios.</li>
+                           <li><i class="bi bi-check-circle-fill"></i> Diseño estructural de cimentaciones.</li>
+                           <li><i class="bi bi-check-circle-fill"></i> Diseño  estructural de muros de contención.</li>
+                           <li><i class="bi bi-check-circle-fill"></i> Diseño estructural de estructuras metálicas.</li>
+                        </ul>
+                     </div>
+                     <div class="col-lg-4 order-1 order-lg-2 text-center">
+                        <img src="assets/img/ingenieria-estructural.svg" alt="" class="img-fluid">
+                     </div>
                   </div>
-                </div><!-- End Tab Content 5 -->
-          
-                <div class="tab-pane" id="tab-6">
+               </div>
+               <!-- End Tab Content 5 -->
+               <div class="tab-pane" id="tab-6">
                   <div class="row gy-4">
-                    <div class="col-lg-8 order-2 order-lg-1">
-                      <h3>Diseño y modelamiento BIM</h3>
-                      <p>
-                        La eficiencia en el uso del tiempo y los recursos tiene un impacto significativo en el resultado final de una construcción. Esto se logra mediante la creación de proyectos fundamentados en el Modelo de Información para la Construcción (BIM), lo cual nos brinda la capacidad de desarrollar un proyecto que esté en armonía con las distintas disciplinas involucradas. De esta manera, se anticipa la visualización del proceso constructivo, lo que mejora la planificación de la obra y conlleva a un ahorro en los gastos de construcción.
-                      </p>
-                      <p class="fst-italic">
-                        En este curso tendrás la oportunidad de aprender de profesionales capacitados en diferentes softwares de diseño y modelamiento, que permiten entregar a nuestros clientes un proyecto optimizado. Ofrecemos:
-                      </p>
-                      <ul>
-                        <li><i class="bi bi-check-circle-fill"></i> Diseño y modelado arquitectónico.</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Diseño y modelado estructural</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Diseño y modelado de las instalaciones eléctricas y sanitarias</li>
-                      </ul>
-                    </div>
-                    <div class="col-lg-4 order-1 order-lg-2 text-center">
-                      <img src="assets/img/bim.svg" alt="" class="img-fluid">
-                    </div>
+                     <div class="col-lg-8 order-2 order-lg-1">
+                        <h3>Diseño y modelamiento BIM</h3>
+                        <p>
+                           La eficiencia en el uso del tiempo y los recursos tiene un impacto significativo en el resultado final de una construcción. Esto se logra mediante la creación de proyectos fundamentados en el Modelo de Información para la Construcción (BIM), lo cual nos brinda la capacidad de desarrollar un proyecto que esté en armonía con las distintas disciplinas involucradas. De esta manera, se anticipa la visualización del proceso constructivo, lo que mejora la planificación de la obra y conlleva a un ahorro en los gastos de construcción.
+                        </p>
+                        <p class="fst-italic">
+                           En este curso tendrás la oportunidad de aprender de profesionales capacitados en diferentes softwares de diseño y modelamiento, que permiten entregar a nuestros clientes un proyecto optimizado. Ofrecemos:
+                        </p>
+                        <ul>
+                           <li><i class="bi bi-check-circle-fill"></i> Diseño y modelado arquitectónico.</li>
+                           <li><i class="bi bi-check-circle-fill"></i> Diseño y modelado estructural</li>
+                           <li><i class="bi bi-check-circle-fill"></i> Diseño y modelado de las instalaciones eléctricas y sanitarias</li>
+                        </ul>
+                     </div>
+                     <div class="col-lg-4 order-1 order-lg-2 text-center">
+                        <img src="assets/img/bim.svg" alt="" class="img-fluid">
+                     </div>
                   </div>
-                </div><!-- End Tab Content 6 -->
-              </div>
-            </div>  
-          </section><!-- End Features Section -->
-          
-          
-          
-           <!-- ======= Services Section ======= -->
-           <section id="services" class="services">
-            <div class="container" data-aos="fade-up">
-          
-              <div class="section-header">
-                <h2>Capacitaciones</h2>
-                <p>Cursos gratuitos de construcción, podrás indagar estudiar temas como fontanería, instalación de electricidad, estructuras o energías renovables en el hogar.</p>
-              </div>
-          
-              <div class="row gy-5">
-          
-                <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                  <div class="service-item">
-                    <div class="img">
-                      <img src="assets/img/services-1.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="details position-relative">
-                      <div class="icon">
-                        <i class="bi bi-bricks"></i>
-                      </div>
-                      <a href="#" class="stretched-link">
-                        <h3>Albañleria</h3>
-                      </a>
-                      <p>Aprende el oficio y haz de él tu profesión con este Curso online de Albañilería.</p>
-                    </div>
-                  </div>
-                </div><!-- End Service Item -->
-          
-                <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                  <div class="service-item">
-                    <div class="img">
-                      <img src="assets/img/services-2.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="details position-relative">
-                      <div class="icon">
-                        <i class="bi bi-brush"></i>
-                      </div>
-                      <a href="#" class="stretched-link">
-                        <h3>Pintura y empastado</h3>
-                      </a>
-                      <p>El Curso Online de Pintor está dirigido a los profesionales del mundo de la edificación y obra civil dentro del área profesional albañilería y acabados.</p>
-                    </div>
-                  </div>
-                </div><!-- End Service Item -->
-          
-                <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                  <div class="service-item">
-                    <div class="img">
-                      <img src="assets/img/services-3.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="details position-relative">
-                      <div class="icon">
-                        <i class="bi bi-ethernet"></i>
-                      </div>
-                      <a href="#" class="stretched-link">
-                        <h3>Electricidad</h3>
-                      </a>
-                      <p>En este curso de electricista aprenderás aplicar los principios básicos de los circuitos, tales como la resistencia, la potencia, la electricidad.</p>
-                    </div>
-                  </div>
-                </div><!-- End Service Item -->
-          
-                <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
-                  <div class="service-item">
-                    <div class="img">
-                      <img src="assets/img/services-4.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="details position-relative">
-                      <div class="icon">
-                        <i class="bi bi-gear-wide"></i>
-                      </div>
-                      <a href="#" class="stretched-link">
-                        <h3>Gasfiteria</h3>
-                      </a>
-                      <p>Introducción a la gasfitería – Herramientas básicas – Tuberías agua fría y caliente – Tuberías para desagüe.</p>
-                      <a href="#" class="stretched-link"></a>
-                    </div>
-                  </div>
-                </div><!-- End Service Item -->
-          
-                <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
-                  <div class="service-item">
-                    <div class="img">
-                      <img src="assets/img/services-5.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="details position-relative">
-                      <div class="icon">
-                        <i class="bi bi-door-open-fill"></i>
-                      </div>
-                      <a href="#" class="stretched-link">
-                        <h3>Diseño de interiores</h3>
-                      </a>
-                      <p>Domina la decoración de espacios interiores profesional en 10 meses. Inscripción abierta. Ventajas: Material Complementario, Rápida Aplicación Práctica, Clases Interactivas Y En Vivo, Profesores Expertos.</p>
-                      <a href="#" class="stretched-link"></a>
-                    </div>
-                  </div>
-                </div><!-- End Service Item -->
-          
-                <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="700">
-                  <div class="service-item">
-                    <div class="img">
-                      <img src="assets/img/services-6.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="details position-relative">
-                      <div class="icon">
-                        <i class="bi bi-file-earmark-medical"></i>
-                      </div>
-                      <a href="#" class="stretched-link">
-                        <h3>Lectura de Planos</h3>
-                      </a>
-                      <p>Objetivos del Curso. Brindar conocimientos para que el egresado pueda leer e interpretar planos de construcción y realizar presupuestos.
-                      </p>
-                      <a href="#" class="stretched-link"></a>
-                    </div>
-                  </div>
-                </div><!-- End Service Item -->
-              </div>
+               </div>
+               <!-- End Tab Content 6 -->
             </div>
-          </section><!-- End Services Section -->
-       <!-- ======= Services Section pt2======= -->
-       <section id="services" class="services">
-        <div class="container" data-aos="fade-up">
-      
-          <div class="section-header">
-            <h2>Construcción</h2>
-            <p>Contamos con una diversa variedad de servicios respecto al área de construcción.</p>
-          </div>
-      
-          <div class="row gy-5">
-      
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-              <div class="service-item">
-                <div class="img">
-                  <img src="assets/img/edificaciones.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="details position-relative">
-                  <div class="icon">
-                    <i class="bi bi-building-check"></i>
+         </div>
+      </section>
+      <!-- End Features Section -->
+      <!-- ======= Services Section ======= -->
+      <section id="services" class="services">
+         <div class="container" data-aos="fade-up">
+            <div class="section-header">
+               <h2>Capacitaciones</h2>
+               <p>Cursos gratuitos de construcción, podrás indagar estudiar temas como fontanería, instalación de electricidad, estructuras o energías renovables en el hogar.</p>
+            </div>
+            <div class="row gy-5">
+               <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="service-item">
+                     <div class="img">
+                        <img src="assets/img/services-1.jpg" class="img-fluid" alt="">
+                     </div>
+                     <div class="details position-relative">
+                        <div class="icon">
+                           <i class="bi bi-bricks"></i>
+                        </div>
+                        <a href="#" class="stretched-link">
+                           <h3>Albañleria</h3>
+                        </a>
+                        <p>Aprende el oficio y haz de él tu profesión con este Curso online de Albañilería.</p>
+                     </div>
                   </div>
-                  <a href="#" class="stretched-link">
-                    <h3>Edificaciones</h3>
-                  </a>
-                  <p>Centros educativos, centros de salud, centros comerciales y recreacionales.</p>
-                </div>
-              </div>
-            </div><!-- End Service Item -->
-      
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-              <div class="service-item">
-                <div class="img">
-                  <img src="assets/img/obras de saneamiento.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="details position-relative">
-                  <div class="icon">
-                    <i class="bi bi-cone"></i>
+               </div>
+               <!-- End Service Item -->
+               <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="service-item">
+                     <div class="img">
+                        <img src="assets/img/services-2.jpg" class="img-fluid" alt="">
+                     </div>
+                     <div class="details position-relative">
+                        <div class="icon">
+                           <i class="bi bi-brush"></i>
+                        </div>
+                        <a href="#" class="stretched-link">
+                           <h3>Pintura y empastado</h3>
+                        </a>
+                        <p>El Curso Online de Pintor está dirigido a los profesionales del mundo de la edificación y obra civil dentro del área profesional albañilería y acabados.</p>
+                     </div>
                   </div>
-                  <a href="#" class="stretched-link">
-                    <h3>Obras de saneamiento</h3>
-                  </a>
-                  <p>Servicio de agua potable, de alcantarillado sanitario, de tratamiento de aguas residuales, de dispocisión sanitaria de excretas, etc.</p>
-                </div>
-              </div>
-            </div><!-- End Service Item -->
-      
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-              <div class="service-item">
-                <div class="img">
-                  <img src="assets/img/obras viales.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="details position-relative">
-                  <div class="icon">
-                    <i class="bi bi-signpost-2"></i>
+               </div>
+               <!-- End Service Item -->
+               <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="service-item">
+                     <div class="img">
+                        <img src="assets/img/services-3.jpg" class="img-fluid" alt="">
+                     </div>
+                     <div class="details position-relative">
+                        <div class="icon">
+                           <i class="bi bi-ethernet"></i>
+                        </div>
+                        <a href="#" class="stretched-link">
+                           <h3>Electricidad</h3>
+                        </a>
+                        <p>En este curso de electricista aprenderás aplicar los principios básicos de los circuitos, tales como la resistencia, la potencia, la electricidad.</p>
+                     </div>
                   </div>
-                  <a href="#" class="stretched-link">
-                    <h3>Obras viales</h3>
-                  </a>
-                  <p>Autopistas, calles, puentes, túneles, obras de drenaje pluvial.</p>
-                </div>
-              </div>
-            </div><!-- End Service Item -->
-      
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
-              <div class="service-item">
-                <div class="img">
-                  <img src="assets/img/obras hidraulicas.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="details position-relative">
-                  <div class="icon">
-                    <i class="bi bi-droplet-half"></i>
+               </div>
+               <!-- End Service Item -->
+               <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="service-item">
+                     <div class="img">
+                        <img src="assets/img/services-4.jpg" class="img-fluid" alt="">
+                     </div>
+                     <div class="details position-relative">
+                        <div class="icon">
+                           <i class="bi bi-gear-wide"></i>
+                        </div>
+                        <a href="#" class="stretched-link">
+                           <h3>Gasfiteria</h3>
+                        </a>
+                        <p>Introducción a la gasfitería – Herramientas básicas – Tuberías agua fría y caliente – Tuberías para desagüe.</p>
+                        <a href="#" class="stretched-link"></a>
+                     </div>
                   </div>
-                  <a href="#" class="stretched-link">
-                    <h3>Obras hidráulicas</h3>
-                  </a>
-                  <p>Canales, presas, estaciones de bombeo, esclusas, redes de abastecimiento, sistemas de riego, drenaje o recogida de aguas residuales.</p>
-                  <a href="#" class="stretched-link"></a>
-                </div>
-              </div>
-            </div><!-- End Service Item -->
-      
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
-              <div class="service-item">
-                <div class="img">
-                  <img src="assets/img/estructuras.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="details position-relative">
-                  <div class="icon">
-                    <i class="bi bi-bookshelf"></i>
+               </div>
+               <!-- End Service Item -->
+               <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
+                  <div class="service-item">
+                     <div class="img">
+                        <img src="assets/img/services-5.jpg" class="img-fluid" alt="">
+                     </div>
+                     <div class="details position-relative">
+                        <div class="icon">
+                           <i class="bi bi-door-open-fill"></i>
+                        </div>
+                        <a href="#" class="stretched-link">
+                           <h3>Diseño de interiores</h3>
+                        </a>
+                        <p>Domina la decoración de espacios interiores profesional en 10 meses. Inscripción abierta. Ventajas: Material Complementario, Rápida Aplicación Práctica, Clases Interactivas Y En Vivo, Profesores Expertos.</p>
+                        <a href="#" class="stretched-link"></a>
+                     </div>
                   </div>
-                  <a href="#" class="stretched-link">
-                    <h3>Estructuras metálicas</h3>
-                  </a>
-                  <p>Se construyen diferentes tipos de carpintería e infraestructuras metálicas(techos, cercas, tijerales,etc).</p>
-                  <a href="#" class="stretched-link"></a>
-                </div>
-              </div>
-            </div><!-- End Service Item -->
-      
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="700">
-              <div class="service-item">
-                <div class="img">
-                  <img src="assets/img/mantenimiento.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="details position-relative">
-                  <div class="icon">
-                    <i class="bi bi-exclamation-triangle"></i>
+               </div>
+               <!-- End Service Item -->
+               <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="700">
+                  <div class="service-item">
+                     <div class="img">
+                        <img src="assets/img/services-6.jpg" class="img-fluid" alt="">
+                     </div>
+                     <div class="details position-relative">
+                        <div class="icon">
+                           <i class="bi bi-file-earmark-medical"></i>
+                        </div>
+                        <a href="#" class="stretched-link">
+                           <h3>Lectura de Planos</h3>
+                        </a>
+                        <p>Objetivos del Curso. Brindar conocimientos para que el egresado pueda leer e interpretar planos de construcción y realizar presupuestos.
+                        </p>
+                        <a href="#" class="stretched-link"></a>
+                     </div>
                   </div>
-                  <a href="#" class="stretched-link">
-                    <h3>Mantenimiento en construcciones</h3>
-                  </a>
-                  <p>Mantenimiento preventivo, mantenimiento correctivo, mantenimiento predictivo y de uso.
-                  </p>
-                  <a href="#" class="stretched-link"></a>
-                </div>
-              </div>
-            </div><!-- End Service Item -->
-          </div>
-        </div>
-      </section><!-- End Services Section -->
-
-
-      <div data-aos="fade-up">
+               </div>
+               <!-- End Service Item -->
+            </div>
+         </div>
+      </section>
+      <!-- End Services Section -->
+      <!-- ======= Services Section pt2======= -->
+      <section id="services" class="services">
+         <div class="container" data-aos="fade-up">
+            <div class="section-header">
+               <h2>Construcción</h2>
+               <p>Contamos con una diversa variedad de servicios respecto al área de construcción.</p>
+            </div>
+            <div class="row gy-5">
+               <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="service-item">
+                     <div class="img">
+                        <img src="assets/img/edificaciones.jpg" class="img-fluid" alt="">
+                     </div>
+                     <div class="details position-relative">
+                        <div class="icon">
+                           <i class="bi bi-building-check"></i>
+                        </div>
+                        <a href="#" class="stretched-link">
+                           <h3>Edificaciones</h3>
+                        </a>
+                        <p>Centros educativos, centros de salud, centros comerciales y recreacionales.</p>
+                     </div>
+                  </div>
+               </div>
+               <!-- End Service Item -->
+               <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="service-item">
+                     <div class="img">
+                        <img src="assets/img/obras de saneamiento.jpg" class="img-fluid" alt="">
+                     </div>
+                     <div class="details position-relative">
+                        <div class="icon">
+                           <i class="bi bi-cone"></i>
+                        </div>
+                        <a href="#" class="stretched-link">
+                           <h3>Obras de saneamiento</h3>
+                        </a>
+                        <p>Servicio de agua potable, de alcantarillado sanitario, de tratamiento de aguas residuales, de dispocisión sanitaria de excretas, etc.</p>
+                     </div>
+                  </div>
+               </div>
+               <!-- End Service Item -->
+               <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="service-item">
+                     <div class="img">
+                        <img src="assets/img/obras viales.jpg" class="img-fluid" alt="">
+                     </div>
+                     <div class="details position-relative">
+                        <div class="icon">
+                           <i class="bi bi-signpost-2"></i>
+                        </div>
+                        <a href="#" class="stretched-link">
+                           <h3>Obras viales</h3>
+                        </a>
+                        <p>Autopistas, calles, puentes, túneles, obras de drenaje pluvial.</p>
+                     </div>
+                  </div>
+               </div>
+               <!-- End Service Item -->
+               <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="service-item">
+                     <div class="img">
+                        <img src="assets/img/obras hidraulicas.jpg" class="img-fluid" alt="">
+                     </div>
+                     <div class="details position-relative">
+                        <div class="icon">
+                           <i class="bi bi-droplet-half"></i>
+                        </div>
+                        <a href="#" class="stretched-link">
+                           <h3>Obras hidráulicas</h3>
+                        </a>
+                        <p>Canales, presas, estaciones de bombeo, esclusas, redes de abastecimiento, sistemas de riego, drenaje o recogida de aguas residuales.</p>
+                        <a href="#" class="stretched-link"></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End Service Item -->
+               <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
+                  <div class="service-item">
+                     <div class="img">
+                        <img src="assets/img/estructuras.jpg" class="img-fluid" alt="">
+                     </div>
+                     <div class="details position-relative">
+                        <div class="icon">
+                           <i class="bi bi-bookshelf"></i>
+                        </div>
+                        <a href="#" class="stretched-link">
+                           <h3>Estructuras metálicas</h3>
+                        </a>
+                        <p>Se construyen diferentes tipos de carpintería e infraestructuras metálicas(techos, cercas, tijerales,etc).</p>
+                        <a href="#" class="stretched-link"></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End Service Item -->
+               <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="700">
+                  <div class="service-item">
+                     <div class="img">
+                        <img src="assets/img/mantenimiento.jpg" class="img-fluid" alt="">
+                     </div>
+                     <div class="details position-relative">
+                        <div class="icon">
+                           <i class="bi bi-exclamation-triangle"></i>
+                        </div>
+                        <a href="#" class="stretched-link">
+                           <h3>Mantenimiento en construcciones</h3>
+                        </a>
+                        <p>Mantenimiento preventivo, mantenimiento correctivo, mantenimiento predictivo y de uso.
+                        </p>
+                        <a href="#" class="stretched-link"></a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End Service Item -->
+            </div>
+         </div>
+      </section>
+      <section id="features" class="features">
+        
+    
+        <div data-aos="fade-up">
         <div class conteiner>
             <div class="row content-layout">
             <div class="col-md-12 main-content">
             <div class="row">
             <div class="col-md-2">
             </div>
-            <div class="col-md-8">      
-      <div>
+            <div class="col-md-8">  
+        <div>      
 
-        <section id="features" class="features">
-        <form>
+      <section id="features" class="features">
+        <form name="form1" action="" method="POST">
             <fieldset>
-
-      <CENTER><h1>Acceso a consultas</h1></CENTER>
-      <CENTER><p>Para mas informacion adicional rellene estos datos.</p></CENTER>
-      
-      <CENTER><div class conteiner>
-        <div class="row content-layout">
-        <div class="col-md-12 main-content">
-        <div class="row">
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-8"> 
-
-      <form action="/servicio.php" onsubmit="return validarFormulario()">
-          
-          <label for="txtNombre">Ingrese su nombre:</label>
-          <input type="text" id="txtNombre"><br>
-          <label for="txtApellido">Ingrese su apellido:</label>
-          <input type="text" id="txtApellido">
-          <br>
-         
-          <label for="cboGradoInstruccion">Ingrese su grado de instrucción:</label>
-          <select id="cboGradoInstruccion">
-              <option value="">Seleccione</option>
-              <option value="0">Ninguna</option>
-              <option value="1">Primaria</option>
-              <option value="2">Secundaria</option>
-              <option value="3">Estudios técnicos</option>
-              <option value="4">Estudios universitarios</option>
-              <option value="5">Otros</option>
+                <center>
+                <legend>Acceso consultas</legend>
+            </center>
+            <table class="default" align="center">           
+                <tr>              
+                  <td><label for="nombre">Nombre:</label></td> 
+                               
+                  <td> <input id="nombre" type="text" name="nombre" size="40" maxlength="150"
+                    pattern="^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$" required /></td>             
+               
               
-          </select>
-          <br>
-          <label for="txtCorreo">Ingrese su correo electronico:</label>
-          <input type="text" id="txtCorreo"><br>
-          
-          <label for="mensaje">Deje su consulta:</label>
-          <input type="text" id="mensaje"><br>
-        </fieldset>
-        <center>
+                </tr>
+                <td><label for="apellido">Apellido:</label></td> 
+                               
+                  <td> <input id="apellido" type="text" name="apellido" size="40" maxlength="150"
+                    pattern="^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$" required /></td>             
+               
+              
+                </tr>
+                  <tr>                    
+                    <td><label for="cboGradoInstruccion">Ingrese su Grado de Instruccion:</label></td>                
+                    <td><select id="cboGradoInstruccion">
+                      <option value="">Seleccione</option>
+                      <option value="0">Ninguna</option>
+                      <option value="1">Primaria</option>
+                      <option value="2">Secundaria</option>
+                      <option value="3">Estudios técnicos</option>
+                      <option value="4">Estudios universitarios</option>
+                      <option value="5">Otros</option>
+                      </select>
+                    </td>  
+                  </tr>             
+                    <td><label for="email">Email:</label></td>
+                
+                    <td><input id="email" type="email" name="email" size="40" maxlength="132"
+                        pattern="^[a-zA-Z0-9_-]{2,63}@[a-zA-Z0-9]{2,63}[\.][a-z]{2,4}$" required /></td>    
+                  </tr> 
+                  <tr>
+                    <td><label for="Respuesta">Respuesta</label></td>   
 
-           <!--Este boton hace el envio del formulario-->
-           <input type="submit" value="Registrar"/>
-          </center>
+                  <td> <input id="Respuesta" type="text" name="Respuesta" size="40" maxlength="150"
+                    pattern="^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+)" required /></td>
+                </tr>
+                  <tr>              
+              </table>
+            </fieldset>
+            <center>
+                <br>
+            <button type="button"  class="btn btn-lg btn-primary btn-block loginbtn" onclick="test_input()">Enviar</button>
+           
+            <center>
+        </form>
+    </section>
+ 
+    <div id="cajaMensajes"></div>
 
-      </form>
-        </section>
     </div>
-    <div class="col-md-2">
     </div>
   </div>
 </div>
+<div class="col-md-2">
 </div>
 </div>
-        </div>
-      </div>
-<br>
-<br>
-      </section>
-      <footer>
-        
-         <div class="container text-center text-md-start">
-           <div class="row text-center text-md-start">
-               <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                   <h5 class="text-uppercase mb-4 font-weight-bold text-warning">SGC</h5>
-                   <hr class="mb-4">
-                   <p>Cursos de capacitación en diversas áreas y bajo distintas modalidades.
-                   </p>
-               </div>
-               <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                   <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Déjanos ayudarte</h5>
-                   <hr class="mb-4">
-                   <p>
-                       <a  href="#" class="text-light">Tu cuenta</a>
-                   </p>
-                   <p>
-                       <a  href="#" class="text-light">Tus órdenes</a>
-                   </p>
-                   <p>
-                       <a  href="#" class="text-light">Manejo de cuenta</a>
-                   </p>
-                   <p>
-                       <a  href="#" class="text-light">Ayuda</a>
-                   </p>
- 
-               </div>
- 
-               <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                   <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Nuestros beneficios</h5>
-                   <hr class="mb-4">
-                   <p>
-                       <a  href="#" class="text-light">Certificación ISO 9001-2015</a>
-                   </p>
-                   <p>
-                       <a  href="#" class="text-light">Aula Interactiva</a>
-                   </p>
-                   <p>
-                       <a  href="#" class="text-light">Clases 100% en vivo</a>
-                   </p>
-                   <p>
-                       <a  href="#" class="text-light">Bolsa de Trabajo</a>
-                   </p>
-                   
-               </div>
- 
-               <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                   <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contacto</h5>
-                   <hr class="mb-4">
-                   <p>
-                     <i class="bi bi-house-door-fill"></i> La Molina - Baños del Inca - Cajamarca
-                   </p>
-                   <p>
-                     <i class="bi bi-envelope-fill"></i> sgc.construccion@gmail.com
-                   </p>
-                   <p>
-                     <i class="bi bi-telephone-fill"></i> +51 921740327
-                   </p>
-                   
-               </div>
- 
-               <hr class="mb-4">
- 
-               <div class="text-center mb-2">
-                   <p>
-                       Copyright Todos los derechos reservados
-                       <a href="#">
-                           <strong class="text-warning">SGC Corporation</strong>
-                       </a>"
-                   </p>
-               </div>
+</div>
+</div>
+</div>
+  </section>
+
+
+
+
                
-               <div class="text-center">
-                <ul class="list-unstyled lis-inline">
-                  <li class="list-inline-item">
-                      <a href="https://www.facebook.com/profile.php?id=100089964406324" class="text-warning"><i class="bi bi-facebook"></i></a>
-                  </li>
-                  <li class="list-inline-item">
-                      <a href="https://twitter.com/SGC230190789998" class="text-warning"><i class="bi bi-twitter"></i></a>
-                  </li>
-                  <li class="list-inline-item">
-                      <a href="https://www.instagram.com/sgc.ccconstruccion/" class="text-warning"><i class="bi bi-instagram"></i></a>
-                  </li>
-                  <li class="list-inline-item">
-                      <a href="https://www.linkedin.com/in/servicios-generales-de-capacitaci%C3%B3n-consultor%C3%ADa-y-construcci%C3%B3n-0320a9288/" class="text-warning"><i class="bi bi-linkedin"></i></a>
-                  </li>
-              </ul>
+               
+
+
+      <footer>
+         <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+               <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning">SGC</h5>
+                  <hr class="mb-4">
+                  <p>Cursos de capacitación en diversas áreas y bajo distintas modalidades.
+                  </p>
                </div>
- 
- 
-           </div>
-       </div>
+               <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Déjanos ayudarte</h5>
+                  <hr class="mb-4">
+                  <p>
+                     <a  href="#" class="text-light">Tu cuenta</a>
+                  </p>
+                  <p>
+                     <a  href="#" class="text-light">Tus órdenes</a>
+                  </p>
+                  <p>
+                     <a  href="#" class="text-light">Manejo de cuenta</a>
+                  </p>
+                  <p>
+                     <a  href="#" class="text-light">Ayuda</a>
+                  </p>
+               </div>
+               <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Nuestros beneficios</h5>
+                  <hr class="mb-4">
+                  <p>
+                     <a  href="#" class="text-light">Certificación ISO 9001-2015</a>
+                  </p>
+                  <p>
+                     <a  href="#" class="text-light">Aula Interactiva</a>
+                  </p>
+                  <p>
+                     <a  href="#" class="text-light">Clases 100% en vivo</a>
+                  </p>
+                  <p>
+                     <a  href="#" class="text-light">Bolsa de Trabajo</a>
+                  </p>
+               </div>
+               <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contacto</h5>
+                  <hr class="mb-4">
+                  <p>
+                     <i class="bi bi-house-door-fill"></i> La Molina - Baños del Inca - Cajamarca
+                  </p>
+                  <p>
+                     <i class="bi bi-envelope-fill"></i> sgc.construccion@gmail.com
+                  </p>
+                  <p>
+                     <i class="bi bi-telephone-fill"></i> +51 921740327
+                  </p>
+               </div>
+               <hr class="mb-4">
+               <div class="text-center mb-2">
+                  <p>
+                     Copyright Todos los derechos reservados
+                     <a href="#">
+                     <strong class="text-warning">SGC Corporation</strong>
+                     </a>"
+                  </p>
+               </div>
+               <div class="text-center">
+                  <ul class="list-unstyled lis-inline">
+                     <li class="list-inline-item">
+                        <a href="https://www.facebook.com/profile.php?id=100089964406324" class="text-warning"><i class="bi bi-facebook"></i></a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a href="https://twitter.com/SGC230190789998" class="text-warning"><i class="bi bi-twitter"></i></a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a href="https://www.instagram.com/sgc.ccconstruccion/" class="text-warning"><i class="bi bi-instagram"></i></a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/in/servicios-generales-de-capacitaci%C3%B3n-consultor%C3%ADa-y-construcci%C3%B3n-0320a9288/" class="text-warning"><i class="bi bi-linkedin"></i></a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
          <!-- Logo WhatsApp Contacto-->
          <a href="https://api.whatsapp.com/send?phone=051921740327&amp;text=Hola%20deseo%20mayor%20información%20sobre%20los%20cursos%20que%20ofrecen" target="wapppsss">
          <img style="display:scroll;position:fixed;  z-index: 100; bottom:60px; right:10px;" src="Imagenes/LogoWapp2.png"height="80px">
          </a>
          <p>Empresa SGC &copy; 2023. Todos los derechos reservados.</p>
-         
          <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
- 
          <div id="preloader"></div>
-       
          <!-- Vendor JS Files -->
          <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
          <script src="assets/vendor/aos/aos.js"></script>
@@ -721,10 +653,8 @@
          <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
          <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
          <script src="assets/vendor/php-email-form/validate.js"></script>
-       
          <!-- Template Main JS File -->
          <script src="assets/js/main.js"></script>
-     </footer>
-
+      </footer>
    </body>
- </html>
+</html>

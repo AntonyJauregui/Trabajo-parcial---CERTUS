@@ -21,6 +21,7 @@ function test_patron(patron, valor) {
             // Patrones
             var dni_test = new RegExp("^[0-9]{8}");
             var nombre_test = new RegExp("^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$");
+            var apellido_test = new RegExp("^[a-zA-Z]+[ ][a-zA-Z]+([ ][a-zA-Z]+){0,2}$");
             var edad_test = new RegExp(".*");
             var Respuesta_test = new RegExp("^[a-zA-Z]");
             var email_test = new RegExp("^[a-zA-Z0-9_-]{2,63}@[a-zA-Z0-9]{2,63}[\.][a-z]{2,4}$");
@@ -30,8 +31,11 @@ function test_patron(patron, valor) {
                     ver_error('Dni Incorrecto (Minimo 8 digitos)', dni_test, input_valor);
                     break;
                 case 'nombre':
-                    ver_error('Nombre Incorrecto (Mínimo 1 nombre y 1 apellido, Máximo 2 nombre y 2 apellidos)', nombre_test, input_valor);
+                    ver_error('Nombre Incorrecto (Mínimo 1 nombre , Máximo 3 nombre )', nombre_test, input_valor);
                     break;
+                case 'apellido':
+                    ver_error('Apellido Incorrecto (Mínimo 1 apellido, Máximo  2 apellidos)', apellido_test, input_valor);
+                    break;    
                 case 'edad':
                     ver_error('Edad no puede estar vacía', edad_test, input_valor);
                     break;
