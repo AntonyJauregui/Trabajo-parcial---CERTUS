@@ -29,19 +29,34 @@
          </div>
          <div class="col-sm-12 d-flex justify-content-center" >
             <nav  id="navbar" class="navbar">
-               <ul>
+               <ul>  
                   <li><a href="index.html">Inicio</a></li>
                   <li><a href="historia.html">Conócenos</a></li>
                   <li><a href="servicios.html">Servicios</a></li>
                   <li><a href="Tienda-Virtual.html">Tienda Virtual</a></li>
                   <li><a href="aula-virtual.html">Aula Virtual</a></li>
-                  <li><a href="contacto.html">Contacto</a></li>
+                  <li><a href="contacto.html">Contacto</a></li>   
                   <li>
-               </ul>
-               <i class="bi mobile-nav-toggle bi-list"></i>             
-            </nav>
-         </div>
-      </header>
+                     <a>
+                     <div>
+                        <img onclick="showCart(this)" class="cart" src="assets/img/Carrito/cart.png" alt="" >
+                        <p class="count-product"></p>
+                     </div>
+                     <div class="cart-products" id="products-id">
+                        <p class="close-btn" onclick="closeBtn()">X</p>
+                        <h3>Mi carrito</h3>
+                        <div class="card-items">                   
+                        </div>
+                        <h2>Total: S/.<strong class="price-total">0</strong></h2>
+                    </div>                 
+                    
+                  </a>  
+                  </li>       
+                </ul>
+                <i class="bi mobile-nav-toggle bi-list"></i>             
+              </nav>           
+            </div>          
+         </header>
       <section id="features" class="features">
          <div class="container" data-aos="fade-up">
             <center>
