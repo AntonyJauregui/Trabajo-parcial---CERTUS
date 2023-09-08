@@ -20,169 +20,73 @@
       <!-- Template Main CSS File -->
       <link href="assets/css/main.css" rel="stylesheet">
   <!-- Bootswatch Cosmo Theme -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
 </head>
 
 <body>
-  
-  <header id="header" >
-    <section id="hero-animated" class="hero-animated d-flex align-items-center">
-       <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-       <img src="Imagenes/LOGO.png" class="img-fluid animated" width="250px">
-    </section>
-    <div>
-       <div class="col-sm-12 d-flex justify-content-center" >
-          <nav  id="navbar" class="navbar">
-             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="historia.html">Conócenos</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="Tienda-Virtual.html">Tienda Virtual</a></li>
-                <li><a href="aula-virtual.html">Aula Virtual</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-             </ul>
-             <i class="bi mobile-nav-toggle bi-list"></i>
-          </nav>
+   
+   <style>
+      body{
+         margin-top: 150px;
+         background: #9cdafa;
+         str
+      }
+      b{
+         color: black;
+      }
+
+      .success, .error {
+          color: white;
+          padding: 5px;
+          margin: 5px 0 15px 0px;
+      }
+
+      .success {
+          background: #1766a3;
+      }
+
+      .error {
+          background: red;
+      }
+  </style>
+
+     <div class="container">
+   <h1>Incripsción de Cursos</h1>
+   <form id="book-form">
+       <div>
+           <label for="title"><b> Curso </b></label>
+           <input type="text" id="title" class="u-full-width">
        </div>
-    </div>
- </header>
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Registro de Cursos</a>
-  </nav>
-
-  <div class="container">
-    <!-- APPLICATION -->
-    <div id="App" class="row pt-5">
-      <!-- FORM -->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-header">
-            <h4>Añadir un Curso</h4>
-          </div>
-          <form id="product-form" class="card-body">
-            <div class="form-group">
-              <input type="text" id="name" placeholder="Nombre del Curso" class="form-control" />
-            </div>
-            <div class="form-group">
-              <input type="number" id="price" step="0.01" placeholder="Precio del Curso" class="form-control" />
-            </div>
-            <div class="form-group">
-              <input type="number" id="year" min="1900" max="2099" step="1" value="2018" class="form-control" />
-            </div>
-            <input type="submit" value="Registrar Curso" class="btn btn-primary btn-block" />
-          </form>
-        </div>
-      </div>
-
-      <!-- PRODUCTS LIST -->
-      <div id="product-list" class="col-md-8"></div>
-    </div>
-  </div>
-
-  <script src="RegistroCurso.js"></script>
-
-  <footer>
-    <div class="container text-center text-md-start">
-       <div class="row text-center text-md-start">
-          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-             <h5 class="text-uppercase mb-4 font-weight-bold text-warning">SGC</h5>
-             <hr class="mb-4">
-             <p>Cursos de capacitación en diversas áreas y bajo distintas modalidades.
-             </p>
-          </div>
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-             <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Déjanos ayudarte</h5>
-             <hr class="mb-4">
-             <p>
-                <a  href="#" class="text-light">Tu cuenta</a>
-             </p>
-             <p>
-                <a  href="#" class="text-light">Tus órdenes</a>
-             </p>
-             <p>
-                <a  href="#" class="text-light">Manejo de cuenta</a>
-             </p>
-             <p>
-                <a  href="#" class="text-light">Ayuda</a>
-             </p>
-          </div>
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-             <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Nuestros beneficios</h5>
-             <hr class="mb-4">
-             <p>
-                <a  href="#" class="text-light">Certificación ISO 9001-2015</a>
-             </p>
-             <p>
-                <a  href="#" class="text-light">Aula Interactiva</a>
-             </p>
-             <p>
-                <a  href="#" class="text-light">Clases 100% en vivo</a>
-             </p>
-             <p>
-                <a  href="#" class="text-light">Bolsa de Trabajo</a>
-             </p>
-          </div>
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-             <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contacto</h5>
-             <hr class="mb-4">
-             <p>
-                <i class="bi bi-house-door-fill"></i> La Molina - Baños del Inca - Cajamarca
-             </p>
-             <p>
-                <i class="bi bi-envelope-fill"></i> sgc.construccion@gmail.com
-             </p>
-             <p>
-                <i class="bi bi-telephone-fill"></i> +51 921740327
-             </p>
-          </div>
-          <hr class="mb-4">
-          <div class="text-center mb-2">
-             <p>
-                Copyright Todos los derechos reservados
-                <a href="#">
-                <strong class="text-warning">SGC Corporation</strong>
-                </a>"
-             </p>
-          </div>
-          <div class="text-center">
-             <ul class="list-unstyled lis-inline">
-                <li class="list-inline-item">
-                   <a href="https://www.facebook.com/profile.php?id=100089964406324" class="text-warning"><i class="bi bi-facebook"></i></a>
-                </li>
-                <li class="list-inline-item">
-                   <a href="https://twitter.com/SGC230190789998" class="text-warning"><i class="bi bi-twitter"></i></a>
-                </li>
-                <li class="list-inline-item">
-                   <a href="https://www.instagram.com/sgc.ccconstruccion/" class="text-warning"><i class="bi bi-instagram"></i></a>
-                </li>
-                <li class="list-inline-item">
-                   <a href="https://www.linkedin.com/in/servicios-generales-de-capacitaci%C3%B3n-consultor%C3%ADa-y-construcci%C3%B3n-0320a9288/" class="text-warning"><i class="bi bi-linkedin"></i></a>
-                </li>
-             </ul>
-          </div>
+       <div>
+           <label for="author"><b>Turno</b></label>
+           <input type="text" id="author" class="u-full-width">
        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <!-- Logo WhatsApp Contacto-->
-    <a href="https://api.whatsapp.com/send?phone=051921740327&amp;text=Hola%20deseo%20mayor%20información%20sobre%20los%20cursos%20que%20ofrecen" target="wapppsss">
-    <img style="display:scroll;position:fixed;  z-index: 100; bottom:60px; right:10px;" src="Imagenes/LogoWapp2.png"height="80px">
-    </a>
-    <p>Empresa SGC &copy; 2023. Todos los derechos reservados.</p>
-    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-    <div id="preloader"></div>
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
- </footer>
+       <div>
+           <label for="isbn"><b>Modalidad</b></label>
+           <input type="text" id="isbn" class="u-full-width">
+       </div>
+       <div>
+          <b> <input type="submit" value="Registrar" class="u-full-width"></b>
+          <b><input type="button" id="borrar" value="Borrar Todo" /></b>
+       </div>
+   </form>
+
+   <table class="u-full-width">
+       <thead>
+           <tr>
+               <th>Curso</th>
+               <th>Turno</th>
+               <th>Modalidad</th>
+               <th></th>
+           </tr>
+       </thead>
+       <tbody id="book-list">
+
+       </tbody>
+   </table>
+</div>
+<script src="Js/RegistroCurso.js"></script>
 
 </body>
 

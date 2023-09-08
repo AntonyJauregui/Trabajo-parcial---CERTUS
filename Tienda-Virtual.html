@@ -47,7 +47,7 @@
                         <h3>Mi carrito</h3>
                         <div class="card-items">                   
                         </div>
-                        <h2>Total: S/.<strong class="price-total">0</strong></h2>
+                        <h2>Total: $<strong class="price-total">0</strong></h2>
                     </div>                 
                     
                   </a>  
@@ -132,13 +132,19 @@
                               </tr>
                               <tr>
                                  <td>
-                                    <label
-                                       ><input type="checkbox" id="cbox1" value="first_checkbox" /> Cursos de Especializacion</label
-                                       ><br />
+                                    <label>
+                                       <input type="checkbox" id="cbox1" value="first_checkbox" /> Cursos de Especializacion</label><br />
                                  </td>
                               </tr>
                            </table>
-                        </div>
+                        </div> 
+                        <div class="shadow p-3 mb-5 bg-body rounded">
+                           <table class="default">
+                              <tr>
+                                 <td><b><a href="RegistroCurso.html">Inscripcion de Cursos</a></b></td>
+                              </tr>
+                              </table>
+                        </div>                       
                      </td>
                   </tr>
                </table>
@@ -153,7 +159,7 @@
                                        <div class="carts">
                                           <div>
                                              <img src="Imagenes/t1.png" alt="">
-                                             <p>S/.<span>180.00</span></p>
+                                             <p>$<span>180.00</span></p>
                                           </div>
                                           <p class="title">Taller de Metrados en Edificaciones con Excel y Autocad</p>
                                           <p class="clasificacion">
@@ -179,7 +185,7 @@
                                        <div class="carts">
                                           <div>
                                              <img src="Imagenes/t2.png" alt="">
-                                             <p>S/.<span>560.00</span></p>
+                                             <p>$<span>560.00</span></p>
                                           </div>
                                           <p class="title"> Especialista BIM con Revit Architecture, Structure & Mep</p>
                                           <p class="clasificacion">
@@ -205,7 +211,7 @@
                                        <div class="carts">
                                           <div>
                                              <img src="Imagenes/t3.png" alt="">
-                                             <p>S/.<span>150.00</span></p>
+                                             <p>$<span>150.00</span></p>
                                           </div>
                                           <p class="title">Costos y presupuestos con S10</p>
                                           <p class="clasificacion">
@@ -232,7 +238,7 @@
                                        <div class="carts">
                                           <div>
                                              <img src="Imagenes/t4.png" alt="">
-                                             <p>S/.<span>200.00</span></p>
+                                             <p>$<span>200.00</span></p>
                                           </div>
                                           <p class="title"> AutoCAD Civil 3D (Básico - Intermedio)</p>
                                           <p class="clasificacion">
@@ -259,7 +265,7 @@
                                        <div class="carts">
                                           <div>
                                              <img src="Imagenes/t5.png" alt="">
-                                             <p>S/.<span>550.00</span></p>
+                                             <p>$<span>550.00</span></p>
                                           </div>
                                           <p class="title">Especialista en Ingeniería Estructural con SAP 2000, ETABS Y SAFE</p>
                                           <p class="clasificacion">
@@ -285,7 +291,7 @@
                                        <div class="carts">
                                           <div>
                                              <img src="Imagenes/t6.png" alt="">
-                                             <p>S/.<span>250.00</span></p>
+                                             <p>$<span>250.00</span></p>
                                           </div>
                                           <p class="title">Topografía Aplicada a Obras Civiles con Estación Total y GPS Diferencial</p>
                                           <p class="clasificacion">
@@ -417,5 +423,15 @@
       <script src="assets/vendor/php-email-form/validate.js"></script>
       <!-- Template Main JS File -->
       <script src="assets/js/main.js"></script>
+      <script>
+         function showCart(x){
+             document.getElementById("products-id").style.display = "block";
+         }
+         function closeBtn(){
+              document.getElementById("products-id").style.display = "none";
+         }
+ 
+     </script>
+     <script src="assets/Js/carrito.js"></script>
    </body>
 </html>
