@@ -1,82 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
-   <head>
-      <meta charset="utf-8">
-      <meta content="width=device-width, initial-scale=1.0" name="viewport">
-      <title>SGC - Servicios Generales de Capacitación, Consultoría y Construcción</title>
-      <!DOCTYPE html>
-      <link rel="stylesheet" href="css/Estilo.css">
-      <!-- Favicons -->
-      <link href="assets/img/favicon.png" rel="icon">
-      <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-      <!-- Vendor CSS Files -->
-      <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-      <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-      <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-      <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-      <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-      <!-- Variables CSS Files. Uncomment your preferred color scheme -->
-      <link href="assets/css/variables.css" rel="stylesheet">
-      <!-- Template Main CSS File -->
-      <link href="assets/css/main.css" rel="stylesheet">
-  <!-- Bootswatch Cosmo Theme -->
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+      SGC - Servicios Generales de Capacitación, Consultoría y Construcción
+    </title>
+    <!DOCTYPE html>
+    <link rel="stylesheet" href="css/Estilo.css" />
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+    <link href="assets/css/variables.css" rel="stylesheet" />
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <!-- Bootswatch Cosmo Theme -->
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
+  </head>
 
-<body>
-   
-   <style>
-      body{
-         margin-top: 150px;
-         background: #9cdafa;
+  <body>
+    <style>
+      body {
+        margin-top: 150px;
+        background: #9cdafa;
       }
-      .success, .error {
-          color: white;
-          padding: 5px;
-          margin: 5px 0 15px 0px;
-          background:  red
-      };
+      .success,
+      .error {
+        color: white;
+        padding: 5px;
+        margin: 5px 0 15px 0px;
+        background: red;
+      }
+    </style>
 
-  </style>
-
-     <div class="container">
-   <h1>Incripsción de Cursos</h1>
-   <form id="book-form">
-       <div>
-           <label for="title"><b> Curso </b></label>
-           <input type="text" id="title" class="u-full-width">
-       </div>
-       <div>
-           <label for="author"><b>Turno</b></label>
-           <input type="text" id="author" class="u-full-width">
-       </div>
-       <div>
-           <label for="isbn"><b>Modalidad</b></label>
-           <input type="text" id="isbn" class="u-full-width">
-       </div>
-       <div>
-          <b> <input type="submit" value="Registrar" class="u-full-width"></b>
+    <div class="container">
+      <h1>Incripsción de Cursos</h1>
+      <form id="book-form">
+        <div>
+          <label for="title"><b> Curso </b></label>
+          <input type="text" id="title" class="u-full-width" />
+        </div>
+        <div>
+          <label for="author"><b>Turno</b></label>
+          <input type="text" id="author" class="u-full-width" />
+        </div>
+        <div>
+          <label for="isbn"><b>Modalidad</b></label>
+          <input type="text" id="isbn" class="u-full-width" />
+        </div>
+        <div>
+          <b> <input type="submit" value="Registrar" class="u-full-width" /></b>
           <b><input type="button" id="borrar" value="Borrar Todo" /></b>
-       </div>
-   </form>
+        </div>
+      </form>
 
-   <table class="u-full-width">
-       <thead>
-           <tr>
-               <th>Curso</th>
-               <th>Turno</th>
-               <th>Modalidad</th>
-               <th></th>
-           </tr>
-       </thead>
-       <tbody id="book-list">
-
-       </tbody>
-   </table>
-</div>
-<script src="Java/RegistroCurso.js"></script>
-
-</body>
-
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Curso</th>
+            <th>Turno</th>
+            <th>Modalidad</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
+    </div>
+    <script src="Java/RegistroCurso.js"></script>
+  </body>
 </html>
